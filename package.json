@@ -1,0 +1,15 @@
+{
+  "name": "letswrite-liff-init",
+  "private": true,
+  "scripts": {
+    "build:css": "sass src/style.sass dist/style.min.css --style=compressed",
+    "build:js": "terser src/main.js -c -m -o dist/main.min.js",
+    "build:html": "pug index.pug --pretty --out .",
+    "build": "npm run build:css && npm run build:js && npm run build:html"
+  },
+  "devDependencies": {
+    "pug-cli": "^1.0.0-alpha6",
+    "sass": "^1.77.8",
+    "terser": "^5.31.0"
+  }
+}
